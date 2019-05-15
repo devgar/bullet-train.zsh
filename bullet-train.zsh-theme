@@ -186,6 +186,9 @@ fi
 if [ ! -n "${BULLETTRAIN_DIR_EXTENDED+1}" ]; then
   BULLETTRAIN_DIR_EXTENDED=1
 fi
+if [ ! -n "${BULLETTRAIN_DIR_ELLIPSIS+1}" ]; then
+  BULLETTRAIN_DIR_ELLIPSIS="..."
+fi
 
 # GIT
 if [ ! -n "${BULLETTRAIN_GIT_COLORIZE_DIRTY+1}" ]; then
@@ -488,7 +491,7 @@ prompt_dir() {
     dir="${dir}%0~"
   else
     #medium directories (default case)
-    dir="${dir}%4(c:...:)%3c"
+    dir="${dir}%4(c:$BULLETTRAIN_DIR_ELLIPSIS:)%3c"
   fi
 
   prompt_segment $BULLETTRAIN_DIR_BG $BULLETTRAIN_DIR_FG $dir
