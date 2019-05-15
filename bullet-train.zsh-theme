@@ -491,7 +491,7 @@ prompt_dir() {
     dir="${dir}%0~"
   else
     #medium directories (default case)
-    dir="${dir}%4(c:$BULLETTRAIN_DIR_ELLIPSIS:)%3c"
+    dir="${dir}%3(c:$BULLETTRAIN_DIR_ELLIPSIS:)%2c"
   fi
 
   prompt_segment $BULLETTRAIN_DIR_BG $BULLETTRAIN_DIR_FG $dir
